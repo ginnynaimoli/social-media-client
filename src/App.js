@@ -1,7 +1,7 @@
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { themeSettings } from "theme";
 import Homepage from "views/homepage/Homepage";
 import LoginPage from "views/loginPage/LoginPage";
@@ -14,7 +14,7 @@ function App() {
 
   
   return (
-    <BrowserRouter>
+    <Router>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Routes>
@@ -23,7 +23,7 @@ function App() {
           <Route path='/profile/:userId' element={isAuth ? <ProfilePage /> : <Navigate to='/' /> } />
         </Routes>
       </ThemeProvider>
-    </BrowserRouter>
+    </Router>
   );
 }
 
