@@ -20,7 +20,7 @@ const Advertisement = () => {
         width="100%"
         height="auto"
         alt="advert"
-        src="https://sharecircle-server.onrender.com/assets/image.jpg"
+        src="https://sharecircle-server.onrender.com/public/assets/image.jpg"
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
 
